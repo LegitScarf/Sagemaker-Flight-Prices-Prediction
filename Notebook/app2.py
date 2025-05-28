@@ -34,6 +34,14 @@ from feature_engine.encoding import (
 
 sklearn.set_config(transform_output="pandas")
 
+# Page configuration - MUST BE FIRST STREAMLIT COMMAND
+st.set_page_config(
+    page_title="Flight Price Predictor",
+    page_icon="✈️",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
 # Custom CSS for modern UI
 st.markdown("""
 <style>
@@ -224,14 +232,6 @@ st.markdown("""
     header {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
-
-# Page configuration
-st.set_page_config(
-    page_title="Flight Price Predictor",
-    page_icon="✈️",
-    layout="wide",
-    initial_sidebar_state="collapsed"
-)
 
 # All your existing preprocessing code remains the same
 air_transformer = Pipeline(steps=[
