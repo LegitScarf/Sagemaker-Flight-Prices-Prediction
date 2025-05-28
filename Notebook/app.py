@@ -260,7 +260,7 @@ preprocessor = Pipeline(steps=[
 
 # read the training data
 #dir_path = r"C:\Users\KIIT\Desktop\Flight Price Prediction using Sagemaker\Data"
-train = pd.read_csv(r"C:\Users\KIIT\Desktop\Flight Price Prediction using Sagemaker\Data\train.csv")
+train = pd.read_csv("train.csv")
 X_train = train.drop(columns="price")
 y_train = train.price.copy()
 
